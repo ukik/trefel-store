@@ -1,0 +1,25 @@
+{
+  "private": true,
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "devDependencies": {
+    "@fortawesome/free-brands-svg-icons": "^6.5.2",
+    "@fortawesome/free-regular-svg-icons": "^6.5.2",
+    "@fortawesome/free-solid-svg-icons": "^6.5.2",
+    "@vesp/nuxt-fontawesome": "^1.0.4",
+    "nuxt": "^3.5.3",
+    "nuxt-quasar-ui": "^2.0.2",
+    "nuxt-svgo": "^4.0.0",
+    "sass": "^1.62.1"
+  },
+  "dependencies": {
+    "@nuxtjs/seo": "^2.0.0-rc.10",
+    "@quasar/extras": "^1.16.4",
+    "quasar": "^2.12.0"
+  }
+}

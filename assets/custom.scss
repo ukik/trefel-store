@@ -1,0 +1,89 @@
+// WAJIB agar tidak ada horizontal scroll di mobile version, quasar nuxt memang begini jadi harus manual
+#__nuxt {
+  overflow-x: hidden !important;
+}
+
+.q-btn--rectangle {
+  border-radius: 6px;
+}
+
+
+.single-page-section h1,
+.single-page-section h2,
+.single-page-section h3,
+.single-page-section h4,
+.single-page-section h5,
+.single-page-section h6 {
+  margin-bottom: 25px;
+}
+
+body {
+  font-size: 15px;
+  color: #3b3d42;
+  background-color: #ffffff;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  word-wrap: break-word;
+}
+
+p {
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  unicode-bidi: isolate;
+}
+
+p {
+  line-height: 1.6;
+  margin: 0 0 15px;
+  word-wrap: break-word;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0 0 15px;
+  line-height: 1.2;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #223645;
+  font-family: "Montserrat", sans-serif;
+}
+
+.rounded-borders-1 {
+  border-radius: 10px;
+}
+
+.rounded-borders-2 {
+  border-radius: 20px;
+}
+
+.rounded-borders-3 {
+  border-radius: 30px;
+}
+
+.rounded-borders-4 {
+  border-radius: 40px;
+}
+
+.rounded-borders-5 {
+  border-radius: 50px;
+}
+
+.border-black {
+  border: 1px solid black;
+}
