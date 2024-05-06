@@ -87,7 +87,7 @@ const cards = [
 
 @media (min-width: 320px) and (max-width: 759.5px) {
   .container {
-    column-count: 2;
+    column-count: 1;
   }
   /* .card {
     border-left: 2px solid #ffffff00;

@@ -7,7 +7,6 @@
   border-radius: 6px;
 }
 
-
 .single-page-section h1,
 .single-page-section h2,
 .single-page-section h3,
@@ -86,4 +85,13 @@ h6 {
 
 .border-black {
   border: 1px solid black;
+}
+
+
+// Quasar Custom Color Palette
+.text-brand {
+  color: #a2aa33 !important;
+}
+.bg-form {
+  background-color: #3A78C9;
 }

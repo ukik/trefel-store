@@ -9,7 +9,7 @@
     <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
       <q-input clearable counter maxlength="100"
         bg-color="white"
-        input-class="rounded-borders-2"
+        
         rounded
         outlined
         color="primary"
@@ -35,7 +35,7 @@
     <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
       <q-input type="email" clearable counter maxlength="100"
         bg-color="white"
-        input-class="rounded-borders-2"
+        
         rounded
         outlined
         color="primary"
@@ -61,7 +61,7 @@
     <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
       <q-input clearable counter maxlength="25" mask="+62 #### #### ###########"
         bg-color="white"
-        input-class="rounded-borders-2"
+        
         rounded
         outlined
         color="primary"
@@ -87,7 +87,7 @@
     <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
       <q-select clearable multiple
         bg-color="white"
-        input-class="rounded-borders-2"
+        
         rounded
         outlined
         color="primary"
@@ -113,7 +113,7 @@
     <div class="col-12">
       <q-input type="textarea" clearable counter maxlength="300"
         bg-color="white"
-        input-class="rounded-borders-2"
+        
         rounded
         outlined
         color="primary"
@@ -139,7 +139,7 @@
     <div class="col-12">
       <q-input type="textarea" clearable counter maxlength="2000"
         bg-color="white"
-        input-class="rounded-borders-2"
+        
         rounded
         outlined
         color="primary"
