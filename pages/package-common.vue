@@ -113,7 +113,7 @@
 
 <script setup>
 const content = {
-  title: "Service",
+  title: "TOUR PACKAGES",
   cards: [
     {
       id: "1",

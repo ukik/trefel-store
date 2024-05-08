@@ -1,7 +1,7 @@
 <template>
   <div class="form-box">
-    <q-card flat class="rounded-borders-2 bg-form " :class="[
-      $q.screen.width > 425 ? 'q-pa-lg' : 'q-pa-md']">
+    <q-card flat class="rounded-borders-2 bg-form q-pa-md" :class="[
+      $q.screen.width > 1024 ? '' : '']">
       <q-card-section>
         <h5 class="subtitle">LET US KNOW</h5>
         <h2>BOOKING FORM</h2>

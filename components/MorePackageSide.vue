@@ -1,5 +1,5 @@
 <template>
-  <q-img :ratio="1" height="350px" class="q-mt-xl rounded-borders-2" src="https://cdn.quasar.dev/img/parallax2.jpg">
+  <q-img :ratio="1" height="400px" class="q-mt-xl rounded-borders-2" src="https://cdn.quasar.dev/img/parallax2.jpg">
     <div class="absolute-full"></div>
     <div class="absolute-top bg-transparent" style="padding:0px;">
       <q-item>
@@ -20,17 +20,18 @@
       </q-item>
 
       <div class="bg-transparent">
-        <q-list bordered>
+        <q-list>
           <template
             v-for="i in [
               'Vacation Packages',
               'Homeymoon Packages',
               'New Year Packages',
               'Weekend Packages',
+              'Business Packages',
             ]"
           >
     
-          <q-item clickable v-ripple>
+          <q-item clickable>
             <q-item-section avatar>
               <q-icon color="white" name="done" />
             </q-item-section>

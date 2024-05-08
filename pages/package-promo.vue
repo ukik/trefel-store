@@ -117,7 +117,7 @@
 
 <script setup>
 const content = {
-  title: "Service",
+  title: "PACKAGE PROMO",
   cards: [
     {
       id: "1",

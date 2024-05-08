@@ -1,41 +1,12 @@
 <template>
-    <InnerBanner _title="Single Page"></InnerBanner>
+    <InnerBanner _title="CART"></InnerBanner>
 
     <!-- ***Inner Banner html end here*** -->
     <div class="content-page-section row justify-center">
       <div
-        class="col-xl-8 col-lg-10 col-md-11 col-sm-11 col-11" >
-        <q-img
-          class="rounded-borders-2 q-mb-lg"
-          src="assets/images/img16.jpg"
-          :ratio="16/9"
-        />
-        <h2 class="q-mb-lg">Let's build the better world together</h2>
-        <div class="page-content-1 q-mb-xl" v-html="content"></div>
-        <div class="page-content-2 q-mb-xl">
-
-          <h3>Placerat quaerat curae reiciendis commodi. X</h3>
-
-          <div class="row col-gutters q-col-gutter-sm q-mb-lg">
-            <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
-              <q-img :ratio="1" src="assets/images/img4.jpg" alt="" class="rounded-borders-2" />
-            </div>
-            <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
-              <q-img :ratio="1" src="assets/images/img5.jpg" alt="" class="rounded-borders-2" />
-            </div>
-            <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
-              <q-img :ratio="1" src="assets/images/img6.jpg" alt="" class="rounded-borders-2" />
-            </div>
-          </div>
-
-          <q-banner dense :class="[ $q.dark.isActive ? 'bg-grey-9' : 'bg-grey-2' ]" class="rounded-borders-2">
-            <template v-slot:avatar>
-              <q-icon size="xl" name="format_quote" color="black" />
-            </template>
-            <h6 class="q-my-lg q-pr-md">Sagittis perferendis? Leo nobis irure egestas excepturi ipsam nascetur
-              elementum, montes. Torquent, soluta, ac nihil.</h6>
-          </q-banner>
-        </div>
+        class="q-col-gutter-md col-xl-8 col-lg-10 col-md-11 col-sm-11 col-12" >
+        <ProductCart></ProductCart>
+        <ProductCartInformation></ProductCartInformation>
       </div>
     </div>
 </template>

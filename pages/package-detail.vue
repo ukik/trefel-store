@@ -1,15 +1,15 @@
 <template>
-    <InnerBanner _title="Single Page"></InnerBanner>
+    <InnerBanner _title="PACKAGE DETAIL"></InnerBanner>
 
     <!-- ***Inner Banner html end here*** -->
     <div class="content-page-section row justify-center">
       <div
         class="row justify-center q-col-gutter-md col-xl-8 col-lg-10 col-md-11 col-sm-11 col-12" >
-        <div class="col-xl-8 col-lg-8 col-md-11 col-sm-12 col-12">
+        <div class="col-xl-8 col-lg-8 col-md-7 col-sm-12 col-12">
           <SinglePageContent></SinglePageContent>
         </div>        
-        <div class="col row justify-center">
-          <FormBookingPackageSide class="col-12 " :class="[$q.screen.width > 425 ? '' : 'q-mt-xl order-last']"></FormBookingPackageSide>
+        <div class="col" :class="[$q.screen.width > 768 ? '' : 'row']">
+          <FormBookingPackageSide class="col-12" :class="[$q.screen.width > 768 ? '' : 'q-mt-xl order-last']"></FormBookingPackageSide>
           <MorePackageSide class="col-12"></MorePackageSide>
           <RelatedImageSlide class="col-12"></RelatedImageSlide>
           <GoogleMapPackageSide class="col-12"></GoogleMapPackageSide>
