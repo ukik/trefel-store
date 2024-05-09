@@ -13,10 +13,35 @@
     >
       <div
         v-for="(item, index) in content?.cards"
-        class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12"
+        class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12"
       >
-        <q-card flat class="rounded-borders-2">
-          <q-img loading="lazy" :ratio="16 / 9" class="card-box" :src="item?.image">
+        <q-card flat bordered class="rounded-borders-2 q-pa-md">
+          <q-card-actions>
+            <q-rating flat
+              readonly
+              v-model="rating"
+              size="sm"
+              :max="5"
+              color="primary"
+            ></q-rating>
+          </q-card-actions>
+          <q-card-actions>
+            <q-item-label :style="$q.screen.width > 768 ? 'height:72px;' : 'height:auto;'" :lines="$q.screen.width > 768 ? 3 : 100">{{ item?.subtitle }}</q-item-label>
+          </q-card-actions>
+          <q-item>
+            <q-item-section avatar>
+              <q-avatar size="70px">
+                <img src="https://cdn.quasar.dev/img/boy-avatar.png" />
+              </q-avatar>
+            </q-item-section>
+            <q-item-section>
+              <q-item-label lines="1">WILLIAM WRIGHT</q-item-label>
+              <q-item-label caption class="text-primary" lines="1"
+                >TRAVELLERS</q-item-label
+              >
+            </q-item-section>
+          </q-item>
+          <!-- <q-img loading="lazy" :ratio="16 / 9" class="card-box" :src="item?.image">
             <template v-slot:error>
               <div class="absolute-full flex flex-center bg-negative text-white">
                 Cannot load image
@@ -61,7 +86,7 @@
                 </q-card-section>
               </q-card>
             </div>
-          </q-img>
+          </q-img> -->
         </q-card>
       </div>
     </div>
@@ -103,6 +128,7 @@
 </template>
 
 <script setup>
+const rating = 4;
 const content = {
   title: "Service",
   cards: [
@@ -118,7 +144,9 @@ const content = {
       title: "Mr. Bean",
       image: "assets/images/img31.jpg",
       subtitle:
-        "Donec temporibus consectetuer, repudiandae integer pellentesque aliquet justo at sequi, atque quasi.",
+        `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua.`,
     },
     {
       id: "1",
@@ -132,21 +160,9 @@ const content = {
       title: "Mr. Bean",
       image: "assets/images/img13.jpg",
       subtitle:
-        "Donec temporibus consectetuer, repudiandae integer pellentesque aliquet justo at sequi, atque quasi.",
-    },
-    {
-      id: "1",
-      title: "Mr. Bean",
-      image: "assets/images/img17.jpg",
-      subtitle:
-        "Donec temporibus consectetuer, repudiandae integer pellentesque aliquet justo at sequi, atque quasi.",
-    },
-    {
-      id: "1",
-      title: "Mr. Bean",
-      image: "assets/images/img10.jpg",
-      subtitle:
-        "Donec temporibus consectetuer, repudiandae integer pellentesque aliquet justo at sequi, atque quasi.",
+        `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua.`,
     },
   ],
 };

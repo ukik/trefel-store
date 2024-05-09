@@ -1,5 +1,5 @@
 <template>
-  <q-parallax
+  <q-parallax id="call-action-offer"
     :height="$q.screen.width > 768 ? 500 : 850"
     src="/assets/images/banner-img1.jpg"
   >
@@ -116,7 +116,7 @@ h2 {
     display: inline-block;
     list-style: none;
     padding: 15px;
-    /* width: 33.33%; */
+    width: 33.33%;
     text-align: center;
     border-right: 1px solid rgba(255, 255, 255, 0.4);
     border-bottom: 1px solid rgba(255, 255, 255, 0.4);
@@ -132,5 +132,10 @@ h2 {
     position: relative;
     z-index: 1;
 }
+</style>
 
+<style>
+#call-action-offer .q-parallax__media > img, .q-parallax__media > video {
+    left: 50% !important;
+}
 </style>

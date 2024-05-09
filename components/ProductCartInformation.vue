@@ -1,5 +1,5 @@
 <template>
-  <div class="q-mt-lg q-py-none">
+  <div class="q-mt-lg q-py-none col-12">
     <q-list bordered>
       <q-expansion-item group="somegroup" header-class="bg-grey-1">
         <template v-slot:header>

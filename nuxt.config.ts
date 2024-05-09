@@ -86,7 +86,7 @@ export default defineNuxtConfig({
   // ],
   fontawesome: {
     icons: {
-      // solid: ['dollar-sign', 'cog', 'circle', 'check', 'calendar'],
+      solid: ['quote-left'],
       // regular: ['user'],
       brands: ['twitter','instagram','tiktok','whatsapp','x-twitter','facebook-f'],
     }

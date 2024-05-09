@@ -4,14 +4,20 @@
     <!-- ***Inner Banner html end here*** -->
     <div class="content-page-section row justify-center">
       <div
-        class="col-xl-8 col-lg-10 col-md-11 col-sm-11 col-11" >
-        <q-img
+      class="row justify-center col-xl-8 col-lg-10 col-md-12 col-sm-12 col-12"
+      :class="[
+        $q.screen.width > 425 ? 'q-col-gutter-lg' : 'q-col-gutter-y-xl q-col-gutter-x-lg',
+        $q.screen.width > 768 ? 'q-col-gutter-lg' : '',
+      ]">
+        <div class="col-12">
+          <q-img
           class="rounded-borders-2 q-mb-lg"
           src="assets/images/img16.jpg"
           :ratio="16/9"
         />
+        </div>
         <h2 class="q-mb-lg">Let's build the better world together</h2>
-        <div class="page-content-1 q-mb-xl" v-html="content"></div>
+        <div class="page-content-1" v-html="content"></div>
         <div class="page-content-2 q-mb-xl">
 
           <h3>Placerat quaerat curae reiciendis commodi. X</h3>

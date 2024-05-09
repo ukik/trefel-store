@@ -5,15 +5,15 @@
   <!-- ***Inner Banner html end here*** -->
   <div class="content-page-section row justify-center">
     <div
-      class="row justify-center col-xl-8 col-lg-10 col-md-12 col-sm-12 col-11"
+    class="row justify-start col-xl-8 col-lg-10 col-md-12 col-sm-12 col-12"
       :class="[
-        $q.screen.width > 425 ? 'q-col-gutter-lg q-px-md' : 'q-gutter-y-lg',
+        $q.screen.width > 425 ? 'q-col-gutter-lg' : 'q-col-gutter-y-xl q-col-gutter-x-lg',
         $q.screen.width > 768 ? 'q-col-gutter-lg' : '',
-      ]"
+      ]"  
     >
       <div
         v-for="(item, index) in content?.career_positions"
-        class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12"
+        class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12"
       >
         <q-card flat class="rounded-borders-2">
           <q-img loading="lazy" :ratio="16 / 9" class="card-box" :src="item?.image">

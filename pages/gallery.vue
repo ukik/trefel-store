@@ -3,8 +3,8 @@
 
   <!-- ***Inner Banner html end here*** -->
   <div class="content-page-section row justify-center">
-    <div class="row justify-center col-xl-8 col-lg-8 col-md-8 col-sm-11 col-12" :class="[
-        $q.screen.width > 425 ? '' : 'q-px-md',
+    <div class="row justify-center col-xl-8 col-lg-10 col-md-12 col-sm-12 col-12 q-px-md" :class="[
+        $q.screen.width > 425 ? '' : '',
         $q.screen.width > 768 ? '' : '',
       ]">
       <q-card flat class="col-12 q-pa-none">
@@ -98,7 +98,7 @@ const cards = [
 }
 @media (min-width: 760px) and (max-width: 979.5px) {
   .container {
-    column-count: 3;
+    column-count: 2;
   }
 }
 @media (min-width: 980px) and (max-width: 1023.5px) {

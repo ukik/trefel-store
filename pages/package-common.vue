@@ -5,9 +5,9 @@
   <!-- ***Inner Banner html end here*** -->
   <div class="content-page-section row justify-center">
     <div
-      class="row justify-center col-xl-8 col-lg-9 col-md-12 col-sm-12 col-11"
+    class="row justify-center col-xl-8 col-lg-10 col-md-12 col-sm-12 col-12"
       :class="[
-        $q.screen.width > 425 ? 'q-col-gutter-lg q-px-md' : 'q-gutter-y-lg',
+        $q.screen.width > 425 ? 'q-col-gutter-lg' : 'q-col-gutter-y-xl q-col-gutter-x-lg',
         $q.screen.width > 768 ? 'q-col-gutter-lg' : '',
       ]"
     >
