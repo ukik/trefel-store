@@ -1,6 +1,15 @@
 <template>
-  <!-- <main> -->
-  <InnerBanner :_title="content?.title"></InnerBanner>
+  <!-- Call To Action -->
+  <div class="call-action-box bg-color-callback row justify-center">
+    <div class="col-xl-6 col-lg-8 col-md-11 col-sm-12 col-12 text-center q-px-md">
+      <h6 class="text-blue">POPULAR PACKAGES</h6>
+      <h2>CHECKOUT OUR PACKAGES</h2>
+      <p>
+        Fusce hic augue velit wisi quibusdam pariatur, iusto primis, nec nemo, rutrum.
+        Vestibulum cumque laudantium. Sit ornare mollitia tenetur, aptent.
+      </p>
+    </div>
+  </div>
 
   <!-- ***Inner Banner html end here*** -->
   <div class="content-page-section row justify-center">
@@ -74,41 +83,19 @@
       </div>
     </div>
   </div>
-  <!-- Call To Action -->
-  <CallActionOffer></CallActionOffer>
-  <div class="call-action-box bg-color-callback bg-light-grey row justify-center">
-    <div class="col-xl-6 col-lg-8 col-md-11 col-sm-12 col-12 text-center q-px-md">
-      <h5>CALL TO ACTION</h5>
-      <h2 class="q-py-lg">READY FOR UNFORGATABLE TRAVEL. REMEMBER US!</h2>
-      <p>
-        Fusce hic augue velit wisi quibusdam pariatur, iusto primis, nec nemo, rutrum.
-        Vestibulum cumque laudantium. Sit ornare mollitia tenetur, aptent.
-      </p>
-      <div class="q-mt-xl">
-        <q-btn
-          icon="phone"
-          dense
-          unelevated
-          rounded
-          class="q-py-md q-px-lg q-ma-sm rounded-borders-4"
-          color="primary"
-          label="Contact Us!"
-        />
-        <q-btn
-          icon-right="chevron_right"
-          dense
-          unelevated
-          rounded
-          outline
-          class="q-py-md q-px-lg q-ma-sm rounded-borders-4"
-          color="primary"
-          label="Learn More"
-        />
-      </div>
-    </div>
-  </div>
 
-  <!-- </main> -->
+  <div class="q-mb-xl q-pb-xl text-center full-width">
+    <q-btn
+      icon="explore"
+      size="18px"
+      style="height:50px;"
+      unelevated
+      rounded
+      class="rounded-borders-4"
+      color="primary"
+      label="VIEW ALL PACKAGES"
+    />
+  </div>
 </template>
 
 <script setup>
@@ -151,24 +138,6 @@ const content = {
       subtitle:
         "Donec temporibus consectetuer, repudiandae integer pellentesque aliquet justo at sequi, atque quasi.",
     },
-    {
-      id: "1",
-      rating: 4,
-      icon: "directions_bus",
-      title: "BEST TOUR",
-      image: "assets/images/img17.jpg",
-      subtitle:
-        "Donec temporibus consectetuer, repudiandae integer pellentesque aliquet justo at sequi, atque quasi.",
-    },
-    {
-      id: "1",
-      rating: 4,
-      icon: "support_agent",
-      title: "FAST SUPPORT",
-      image: "assets/images/img10.jpg",
-      subtitle:
-        "Donec temporibus consectetuer, repudiandae integer pellentesque aliquet justo at sequi, atque quasi.",
-    },
   ],
 };
 </script>
@@ -208,16 +177,11 @@ h2 {
 }
 
 .q-item__label {
-  /* margin-bottom: 25px; */
-  /* color: white; */
   line-height: 1.6 !important;
 }
 
 .bg-color-callback {
-  padding-top: 85px;
-  padding-bottom: 85px;
-}
-.bg-light-grey {
-  background-color: #f8f8f8;
+  /* padding-top: 85px; */
+  padding-bottom: 50px;
 }
 </style>

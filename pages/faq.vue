@@ -1,5 +1,4 @@
 <template>
-  <!-- <main> -->
   <InnerBanner :_title="content?.title"></InnerBanner>
 
   <!-- ***Inner Banner html end here*** -->
@@ -16,7 +15,7 @@
     >
       <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 q-mb-lg">
         <q-card flat class="rounded-borders-2">
-          <q-img
+          <q-img style="min-height:600px"
             loading="lazy"
             :ratio="16 / 9"
             class="card-box"
@@ -156,40 +155,6 @@
     </div>
   </div>
 
-  <!-- Call To Action -->
-  <!-- <div class="call-action-box bg-color-callback bg-light-grey row justify-center">
-    <div class="col-lg-8 text-center q-px-md">
-      <h5>CALL TO ACTION</h5>
-      <h2 class="q-py-lg">READY FOR UNFORGATABLE TRAVEL. REMEMBER US!</h2>
-      <p>
-        Fusce hic augue velit wisi quibusdam pariatur, iusto primis, nec nemo, rutrum.
-        Vestibulum cumque laudantium. Sit ornare mollitia tenetur, aptent.
-      </p>
-      <div class="q-mt-xl">
-        <q-btn
-          icon="phone"
-          dense
-          unelevated
-          rounded
-          class="q-py-md q-px-lg q-ma-sm rounded-borders-4"
-          color="primary"
-          label="Contact Us!"
-        />
-        <q-btn
-          icon-right="chevron_right"
-          dense
-          unelevated
-          rounded
-          outline
-          class="q-py-md q-px-lg q-ma-sm rounded-borders-4"
-          color="primary"
-          label="Learn More"
-        />
-      </div>
-    </div>
-  </div> -->
-
-  <!-- </main> -->
 </template>
 
 <script setup>
@@ -235,6 +200,7 @@ const content = {
   ],
 };
 </script>
+
 <style scoped>
 .content-page-section {
   padding-bottom: 80px;

@@ -29,7 +29,7 @@
             <template v-slot:after>
               <q-btn
                 :loading="loading"
-                @click="onCoupon"
+                @click=""
                 class="full-height rounded-borders-3"
                 icon-right="send"
                 color="form"

@@ -80,7 +80,9 @@ export default defineNuxtConfig({
     'nuxt-quasar-ui',
     '@nuxtjs/seo',
     '@vesp/nuxt-fontawesome',
+    "vue3-carousel-nuxt"
   ],
+
   // build: [
   //   '@fortawesome/free-brands-svg-icons'
   // ],
