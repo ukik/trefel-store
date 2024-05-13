@@ -126,7 +126,7 @@ export default {
 };
 </script>
 <script setup>
-const rating = 4;
+const rating = ref(4);
 const content = {
   title: "Service",
   cards: [

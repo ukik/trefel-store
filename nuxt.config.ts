@@ -82,7 +82,9 @@ export default defineNuxtConfig({
     '@vesp/nuxt-fontawesome',
     "vue3-carousel-nuxt"
   ],
-
+  plugins: [
+    // '~/plugins/hello', // Susah
+  ],
   // build: [
   //   '@fortawesome/free-brands-svg-icons'
   // ],
@@ -101,6 +103,9 @@ export default defineNuxtConfig({
       'LoadingBar',
       'Notify',
       'Dark',
+    ],
+    directives: [
+      'Intersection',
     ],
     // extras: {
     //   font: 'roboto-font',

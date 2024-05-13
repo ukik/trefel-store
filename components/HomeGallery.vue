@@ -1,4 +1,8 @@
 <template>
+  <q-no-ssr>
+    <EasyLightbox :_gallery="gallery" ref="EasyLightboxRef"></EasyLightbox>
+  </q-no-ssr>
+
   <div class="call-action-box bg-color-callback row justify-center">
     <div class="col-xl-6 col-lg-8 col-md-11 col-sm-12 col-12 text-center q-px-md">
       <h6 class="text-blue">PHOTO GALLERY</h6>
@@ -18,9 +22,9 @@
       ]">
       <q-card flat class="col-12 q-pa-none">
         <div class="container">
-          <template v-for="item in [...cards]">
+          <template v-for="(item, index) in [...cards]">
             <div class="card">
-              <q-img class="rounded-borders-2" :src="item?.image" />
+              <q-img @click="openLightBox(index)" class="rounded-borders-2" :src="item?.image" />
             </div>
           </template>
         </div>
@@ -102,6 +106,22 @@ const cards = [
       "Donec temporibus consectetuer, repudiandae integer pellentesque aliquet justo at sequi, atque quasi.",
   },  
 ];
+
+
+const gallery = computed(() => {
+  let img = [];
+  for (let i = 0; i < cards.length; i++) {
+    img.push(cards[i]['image'])
+  }
+  return img
+})
+const EasyLightboxRef = ref(null);
+const openLightBox = (index = 0) => {
+  EasyLightboxRef.value?.showImage(index);
+  // EasyLightboxRef.value?.showMultiple(gallery, 0)
+  // console.log(EasyLightboxRef)
+};
+
 </script>
 
 <style scoped>

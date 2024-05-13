@@ -115,12 +115,18 @@ h2 {
 .client-section .client-logo ul li {
     display: inline-block;
     list-style: none;
-    padding: 15px;
+    /* padding: 15px; */
     width: 33.33%;
     text-align: center;
     border-right: 1px solid rgba(255, 255, 255, 0.4);
     border-bottom: 1px solid rgba(255, 255, 255, 0.4);
 }
+
+.client-section .client-logo ul li img {
+  width: 100%;
+  height: 100%;
+} 
+
 .client-section {
     background-size: cover;
     background-repeat: no-repeat;

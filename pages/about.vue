@@ -16,27 +16,33 @@
       </div>
 
       <div class="col items-start">
-        <div class="row" :class="[ $q.screen.width > 768 ? 'q-col-gutter-lg' : 'q-col-gutter-lg' ]">
+        <div
+          class="row"
+          :class="[$q.screen.width > 768 ? 'q-col-gutter-lg' : 'q-col-gutter-lg']"
+        >
           <template v-for="(item, index) in side">
-          <div class="col-xl-12 col-lg-12 q-md-12 col-sm-6 col-12 row">
-            <q-card flat bordered class="rounded-borders-2">
-              <q-card-actions align="center">
-                <div class="full-width text-center q-mt-md">
-                  <q-avatar
-                    size="100px"
-                    font-size="45px"
-                    color="blue"
-                    text-color="white"
-                    :icon="item?.icon"
-                  />
-                </div>
-                <div class="text-box text-center q-my-lg full-width q-px-sm">
-                  <h3>{{ item?.title }}</h3>
-                  <q-item-label lines="4">{{ item?.subtitle }}</q-item-label>
-                </div>
-              </q-card-actions>
-            </q-card>
-          </div>
+            <div
+              class="col-xl-12 col-lg-12 q-md-12 col-12 row"
+              :class="[isSM() ? 'col-sm-6' : '', isMD() ? 'col-sm-12' : '']"
+            >
+              <q-card flat bordered class="rounded-borders-2">
+                <q-card-actions align="center">
+                  <div class="full-width text-center q-mt-md">
+                    <q-avatar
+                      size="100px"
+                      font-size="45px"
+                      color="blue"
+                      text-color="white"
+                      :icon="item?.icon"
+                    />
+                  </div>
+                  <div class="text-box text-center q-my-lg full-width q-px-sm">
+                    <h3>{{ item?.title }}</h3>
+                    <q-item-label lines="4">{{ item?.subtitle }}</q-item-label>
+                  </div>
+                </q-card-actions>
+              </q-card>
+            </div>
           </template>
         </div>
       </div>
@@ -44,10 +50,35 @@
   </div>
   <!-- Call To Action -->
   <CallActionPromo></CallActionPromo>
-    
 </template>
 
+<script>
+import globalMixin from "@/plugins/mixins/globalMixin";
+export default {
+  mixins: [globalMixin],
+};
+</script>
+
 <script setup>
+// // import { useNuxtApp } from '#app';
+
+// // const nuxtApp = useNuxtApp();
+
+// // const handleNavigate = () => {
+// //   console.log('nuxtApp', nuxtApp)
+// // }
+
+// // onMounted(() => {
+// //   console.log('onMounted About');
+// //   console.log('nuxtApp', nuxtApp)
+// // })
+// const nuxtApp = useNuxtApp()
+
+// onMounted(() => {
+//   console.log('onMounted About');
+//   console.log('nuxtApp', nuxtApp)
+// })
+
 const content = `<p>
             Assumenda mattis condimentum morbi ipsam felis orci, urna placeat blandit
             dictum amet? Leo magni magna sint erat tenetur! Parturient. Explicabo,
