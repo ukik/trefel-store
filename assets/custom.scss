@@ -95,3 +95,13 @@ h6 {
 .bg-form {
   background-color: #3A78C9;
 }
+
+// ROUTER LINK
+.menu-item-has-children a.router-link-active, .menu-item-has-children .router-link-exact-active {
+  color: white !important;
+  background-color: #3A78C9;
+}
+
+.navigation ul li a.router-link-active, .navigation ul li .router-link-exact-active {
+  font-weight: bold;
+}

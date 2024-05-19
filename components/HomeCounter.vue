@@ -6,7 +6,7 @@
     >
       <div class="col-xl-3 col-lg-3 col-md-3 col-sm-4 col-6">
         <q-card class="rounded-borders-3" flat bordered>
-          <q-card-section class="q-pa-xl">
+          <q-card-section class="q-py-xl">
             <q-card-section class="text-center col-3">
               <h2 class="counter-no text-bold">72K+</h2>
               <div class="counter-desc text-primary">SATISFIED CUSTOMER</div>
@@ -16,7 +16,7 @@
       </div>
       <div class="col-xl-3 col-lg-3 col-md-3 col-sm-4 col-6">
         <q-card class="rounded-borders-3" flat bordered>
-          <q-card-section class="q-pa-xl">
+          <q-card-section class="q-py-xl">
             <q-card-section class="text-center col-3">
               <h2 class="counter-no text-bold">72K+</h2>
               <div class="counter-desc text-primary">ACTIVE PARTNERS</div>
@@ -26,7 +26,7 @@
       </div>
       <div class="col-xl-3 col-lg-3 col-md-3 col-sm-4 col-6">
         <q-card class="rounded-borders-3" flat bordered>
-          <q-card-section class="q-pa-xl">
+          <q-card-section class="q-py-xl">
             <q-card-section class="text-center col-3">
               <h2 class="counter-no text-bold">72K+</h2>
               <div class="counter-desc text-primary">TOUR DESTINATION</div>
@@ -36,7 +36,7 @@
       </div>
       <div class="col-xl-3 col-lg-3 col-md-3 col-sm-4 col-6">
         <q-card class="rounded-borders-3" flat bordered>
-          <q-card-section class="q-pa-xl">
+          <q-card-section class="q-py-xl">
             <q-card-section class="text-center col-3">
               <h2 class="counter-no text-bold">72K+</h2>
               <div class="counter-desc text-primary">TRAVEL GUIDES</div>
@@ -51,47 +51,6 @@
 </template>
 
 <script setup>
-const content = {
-  title: "TOUR PACKAGES",
-  cards: [
-    {
-      id: "1",
-      rating: 4,
-      icon: "hotel",
-      title: "BEST HOTELS",
-      image: "assets/images/img4.jpg",
-      subtitle:
-        "Donec temporibus consectetuer, repudiandae integer pellentesque aliquet justo at sequi, atque quasi.",
-    },
-    {
-      id: "1",
-      rating: 4,
-      icon: "flight_takeoff",
-      title: "TRAVEL INSURANCE",
-      image: "assets/images/img28.jpg",
-      subtitle:
-        "Donec temporibus consectetuer, repudiandae integer pellentesque aliquet justo at sequi, atque quasi.",
-    },
-    {
-      id: "1",
-      rating: 4,
-      icon: "store_mall_directory",
-      title: "ACCESSIBILITY",
-      image: "assets/images/img12.jpg",
-      subtitle:
-        "Donec temporibus consectetuer, repudiandae integer pellentesque aliquet justo at sequi, atque quasi.",
-    },
-    {
-      id: "1",
-      rating: 4,
-      icon: "sticky_note_2",
-      title: "ONLINE BOOKING",
-      image: "assets/images/img13.jpg",
-      subtitle:
-        "Donec temporibus consectetuer, repudiandae integer pellentesque aliquet justo at sequi, atque quasi.",
-    },
-  ],
-};
 </script>
 <style scoped>
 .counter-wrap .counter-no {

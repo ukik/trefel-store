@@ -1,12 +1,12 @@
 <template>
   <q-no-ssr class="col-12">
-    <q-table
+    <q-table id="TransactionHistoryProduct" style="min-height: 500px; max-height: 1000px;"
       flat
       bordered
       separator="cell"
       :table-header-class="$q.dark.isActive ? 'bg-dark' : 'bg-white'"
       class="my-sticky-header-table"
-      title="Product Cart"
+      :title="`Riwayat ${$route.query?.tab}`"
       :rows="[...rows, ...rows, ...rows, ...rows]"
       :columns="columns"
       row-key="id"
@@ -50,13 +50,10 @@
                   <q-item-section side>
                     <q-item-label>{{ col.value }}</q-item-label>
                   </q-item-section>
-                  <!-- <q-item-section side>
-                  <q-item-label caption>{{ col.value }}</q-item-label>
-                </q-item-section> -->
                 </q-item>
               </template>
             </q-list>
-            <q-separator></q-separator>
+            <!-- <q-separator></q-separator>
             <q-card-section class="row bg-white" key="quantity" :props="props">
               <q-btn
                 size="18px"
@@ -81,9 +78,7 @@
                 icon="add"
                 @click="props.row.quantity = Number(props.row.quantity) + 1"
               ></q-btn>
-
-              <!-- <q-btn icon="add" @click="onAdd({ key: 'quantity', index: props.key, row: props.row})"></q-btn> -->
-            </q-card-section>
+            </q-card-section> -->
           </q-card>
         </div>
       </template>
@@ -105,7 +100,7 @@
           <q-td key="price" :props="props">
             {{ props.row.price }}
           </q-td>
-          <q-td style="width: 300px" key="quantity" :props="props">
+          <!-- <q-td style="width: 300px" key="quantity" :props="props">
             <q-card-section class="row bg-white" key="quantity" :props="props">
               <q-btn
                 size="18px"
@@ -130,10 +125,8 @@
                 icon="add"
                 @click="props.row.quantity = Number(props.row.quantity) + 1; onUpdate({ key: 'quantity', index: props.key, row: props.row})"
               ></q-btn>
-
-              <!-- <q-btn icon="add" @click="onAdd({ key: 'quantity', index: props.key, row: props.row})"></q-btn> -->
             </q-card-section>
-          </q-td>
+          </q-td> -->
           <q-td key="sub_total" :props="props">
             <!-- <q-badge color="primary"> -->
             <div class="text-bold text-big">
@@ -144,7 +137,6 @@
         </q-tr>
       </template>
     </q-table>
-    <ProductCalculate @onCoupon="coupon = $event" :calculate="calculate" class="q-mt-lg"></ProductCalculate>
   </q-no-ssr>
 </template>
 
@@ -195,14 +187,14 @@ const columns = [
     align: "left",
     sort: (a, b) => parseInt(a, 10) - parseInt(b, 10),
   },
-  {
-    name: "quantity",
-    label: "Qty",
-    field: "name",
-    align: "left",
-    // sortable: true,
-    // sort: (a, b) => parseInt(a, 10) - parseInt(b, 10),
-  },
+  // {
+  //   name: "quantity",
+  //   label: "Qty",
+  //   field: "name",
+  //   align: "left",
+  //   // sortable: true,
+  //   // sort: (a, b) => parseInt(a, 10) - parseInt(b, 10),
+  // },
   {
     name: "sub_total",
     label: "Sub Total",
@@ -281,6 +273,12 @@ export default {
   }
 };
 </script>
+
+<style>
+#TransactionHistoryProduct .q-table__control {
+    text-transform: capitalize;
+}
+</style>
 
 <style lang="sass">
 .grid-style-transition

@@ -6,45 +6,182 @@
           <nav id="navigation" class="navigation">
             <ul>
               <li class="menu-active">
-                <router-link to="index">Home</router-link>
+                <router-link to="/">Home</router-link>
               </li>
+              
+              <!-- <li>
+                <router-link to="consult">Konsultasi</router-link>
+              </li> -->
               <li>
-                <router-link to="about">about us</router-link>
+                <router-link to="destination">Contact Us</router-link>
               </li>
-              <li>
-                <router-link to="destination">destination</router-link>
-              </li>
-              <li class="menu-item-has-children">
-                <router-link to="/">packages</router-link>
+
+              <!-- <li class="menu-item-has-children">
+                <a to="">Booking</a>
                 <ul>
                   <li>
-                    <router-link to="package-common">Packages</router-link>
+                    <router-link to="package-common">Konsultasi</router-link>
                   </li>
                   <li>
-                    <router-link to="package-promo">Package offer</router-link>
+                    <router-link to="package-promo">Contact Us</router-link>
+                  </li>
+                </ul>
+              </li> -->
+
+              <li class="menu-item-has-children">
+                <a to="">Tour</a>
+                <ul>
+                  <li>
+                    <router-link to="package-common">Regular</router-link>
                   </li>
                   <li>
-                    <router-link to="package-detail">Package detail</router-link>
+                    <router-link to="package-promo">Promo</router-link>
                   </li>
                   <li>
-                    <router-link to="cart">Cart page</router-link>
+                    <router-link to="package-detail">Tour Guide</router-link>
                   </li>
                   <li>
-                    <router-link to="booking">Booking page</router-link>
-                  </li>
-                  <li>
-                    <router-link to="confirmation">Confirmation</router-link>
+                    <router-link to="cart">Destination</router-link>
                   </li>
                 </ul>
               </li>
+              
               <li class="menu-item-has-children">
-                <router-link to="/">Pages</router-link>
+                <a to="">Produk</a>
+                <ul>
+                  <li>
+                    <router-link to="package-common">Travel</router-link>
+                  </li>
+                  <li>
+                    <router-link to="package-promo">Rental</router-link>
+                  </li>
+                  <li>
+                    <router-link to="package-detail">Hotel</router-link>
+                  </li>
+                  <li>
+                    <router-link to="cart">Souvenir</router-link>
+                  </li>
+                  <li>
+                    <router-link to="cart">Kuliner</router-link>
+                  </li>
+                  <li>
+                    <router-link to="confirmation">Talent</router-link>
+                  </li>
+                </ul>
+              </li>
+
+              <li class="menu-item-has-children">
+                <a to="">Page</a>
+                <ul>
+                  <li>
+                    <router-link to="package-common">About Us</router-link>
+                  </li>
+                  <li>
+                    <router-link to="package-promo">Service</router-link>
+                  </li>
+                  <li>
+                    <router-link to="package-detail">Career</router-link>
+                  </li>
+                  <li>
+                    <router-link to="cart">Gallery</router-link>
+                  </li>
+                  <li>
+                    <router-link to="cart">Testimonial</router-link>
+                  </li>
+                  <li class="menu-item-has-children">
+                    <!-- <a to="" :class="[ 
+                      $route.name == 'career' ? 'router-link-exact-active' : '',
+                    $route.name == 'career-detail' ? 'router-link-exact-active' : '' ]">Info</a> -->
+                    <a>Info</a>
+                    <ul>
+                      <li>
+                        <router-link to="career">Faq</router-link>
+                      </li>
+                      <li>
+                        <router-link to="career-detail">Term & Condition</router-link>
+                      </li>
+                      <li>
+                        <router-link to="career">Privacy Policy</router-link>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+
+
+              <li class="menu-item-has-children">
+                <a to="">Akun</a>
+                <ul>
+                  <li class="menu-item-has-children">
+                    <!-- <a to="" :class="[ 
+                      $route.name == 'career' ? 'router-link-exact-active' : '',
+                    $route.name == 'career-detail' ? 'router-link-exact-active' : '' ]">Info</a> -->
+                    <a>Transaksi</a>
+                    <ul>
+                      <li>
+                        <router-link to="career">Keranjang</router-link>
+                      </li>
+                      <li>
+                        <router-link to="career-detail">Boooking</router-link>
+                      </li>
+                      <li>
+                        <router-link to="career">Pembayaran</router-link>
+                      </li>
+                      <li>
+                        <router-link to="career">Riwayat</router-link>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="menu-item-has-children">
+                    <!-- <a to="" :class="[ 
+                      $route.name == 'career' ? 'router-link-exact-active' : '',
+                    $route.name == 'career-detail' ? 'router-link-exact-active' : '' ]">Info</a> -->
+                    <a>Biodata</a>
+                    <ul>
+                      <li>
+                        <router-link to="career">Profile</router-link>
+                      </li>
+                      <li>
+                        <router-link to="career-detail">Alamat</router-link>
+                      </li>
+                      <li>
+                        <router-link to="career">Company</router-link>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="menu-item-has-children">
+                    <!-- <a to="" :class="[ 
+                      $route.name == 'career' ? 'router-link-exact-active' : '',
+                    $route.name == 'career-detail' ? 'router-link-exact-active' : '' ]">Info</a> -->
+                    <a>Partnership</a>
+                    <ul>
+                      <li>
+                        <router-link to="career">Affiliate</router-link>
+                      </li>
+                      <li>
+                        <router-link to="career-detail">Member</router-link>
+                      </li>
+                      <li>
+                        <router-link to="career">Biro Pemasaran</router-link>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <router-link to="career-detail">Logout</router-link>
+                  </li>
+                </ul>
+              </li>
+
+              <!-- <li class="menu-item-has-children">
+                <a to="">Pages</a>
                 <ul>
                   <li>
                     <router-link to="service">Service</router-link>
                   </li>
                   <li class="menu-item-has-children">
-                    <router-link to="/">Career</router-link>
+                    <a to="" :class="[ 
+                      $route.name == 'career' ? 'router-link-exact-active' : '',
+                    $route.name == 'career-detail' ? 'router-link-exact-active' : '' ]">Career</a>
                     <ul>
                       <li>
                         <router-link to="career">Career</router-link>
@@ -60,8 +197,8 @@
                   <li>
                     <router-link to="gallery">Gallery page</router-link>
                   </li>
-                  <li class="menu-item-has-children">
-                    <router-link to="/">Blog</router-link>
+                  <li v-if="false" class="menu-item-has-children">
+                    <a to="/">Blog</a>
                     <ul>
                       <li>
                         <router-link to="blog-archive">Blog archive</router-link>
@@ -90,10 +227,10 @@
                     <router-link to="comming-soon">Comming Soon Page</router-link>
                   </li>
                 </ul>
-              </li>
-              <li>
-                <router-link to="contact">contact us</router-link>
-              </li>
+              </li> -->
+              <!-- <li>
+                <router-link to="contact-us">contact us</router-link>
+              </li> -->
             </ul>
           </nav>
         </div>
@@ -103,16 +240,16 @@
 </template>
 
 <style scope>
-
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
-.navigation-container ul, ul {
-    font-size: 0;
-    list-style: none;
-    margin: 0;
-    padding: 0;
+.navigation-container ul,
+ul {
+  font-size: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .navigation-container {

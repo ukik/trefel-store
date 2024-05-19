@@ -5,7 +5,7 @@
   <!-- ***Inner Banner html end here*** -->
   <div class="content-page-section row justify-center">
     <div
-    class="row justify-center col-xl-8 col-lg-10 col-md-12 col-sm-12 col-12"
+      class="row justify-center col-xl-8 col-lg-10 col-md-12 col-sm-12 col-12"
       :class="[
         $q.screen.width > 425 ? 'q-col-gutter-lg' : 'q-col-gutter-y-xl q-col-gutter-x-lg',
         $q.screen.width > 768 ? 'q-col-gutter-lg' : '',
@@ -16,12 +16,7 @@
         class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12"
       >
         <q-card flat class="rounded-borders-2">
-          <q-img
-            loading="lazy"
-            :ratio="16 / 9"
-            class="card-box"
-            :src="item?.image"
-          >
+          <q-img loading="lazy" :ratio="16 / 9" class="card-box" :src="item?.image">
             <template v-slot:error>
               <div class="absolute-full flex flex-center bg-negative text-white">
                 Cannot load image
@@ -101,7 +96,7 @@ const content = {
     {
       id: "1",
       icon: "hotel",
-      title: "BEST HOTELS",
+      title: "BEST AKOMODASI",
       image: "assets/images/img4.jpg",
       subtitle:
         "Donec temporibus consectetuer, repudiandae integer pellentesque aliquet justo at sequi, atque quasi.",
@@ -133,7 +128,7 @@ const content = {
     {
       id: "1",
       icon: "directions_bus",
-      title: "BEST TOUR",
+      title: "BEST MANAGEMENT",
       image: "assets/images/img17.jpg",
       subtitle:
         "Donec temporibus consectetuer, repudiandae integer pellentesque aliquet justo at sequi, atque quasi.",
@@ -146,6 +141,56 @@ const content = {
       subtitle:
         "Donec temporibus consectetuer, repudiandae integer pellentesque aliquet justo at sequi, atque quasi.",
     },
+
+    {
+      id: "1",
+      icon: "directions_bike",
+      image: "assets/images/img4.jpg",
+      title: "AFFORDABLE TOURS",
+      subtitle:
+        "Donec temporibus consectetuer, repudiandae integer pellentesque aliquet justo at sequi, atque quasi.",
+    },
+    {
+      id: "1",
+      icon: "sailing",
+      title: "BEST TOUR GUIDES",
+      image: "assets/images/img13.jpg",
+      subtitle:
+        "Donec temporibus consectetuer, repudiandae integer pellentesque aliquet justo at sequi, atque quasi.",
+    },
+    {
+      id: "1",
+      icon: "volunteer_activism",
+      title: "PERSONAL TOUCH",
+      image: "assets/images/img17.jpg",
+      subtitle:
+        "Donec temporibus consectetuer, repudiandae integer pellentesque aliquet justo at sequi, atque quasi.",
+    },
+    {
+      id: "1",
+      icon: "face",
+      title: "FRIENDLY SERVICE",
+      image: "assets/images/img28.jpg",
+      subtitle:
+        "Donec temporibus consectetuer, repudiandae integer pellentesque aliquet justo at sequi, atque quasi.",
+    },
+
+    {
+      id: "1",
+      icon: "verified",
+      title: "REAL EXPERIENCED",
+      image: "assets/images/img17.jpg",
+      subtitle:
+        "Donec temporibus consectetuer, repudiandae integer pellentesque aliquet justo at sequi, atque quasi.",
+    },
+    {
+      id: "1",
+      icon: "event",
+      title: "FLEXIBLE SCHEDULE",
+      image: "assets/images/img28.jpg",
+      subtitle:
+        "Donec temporibus consectetuer, repudiandae integer pellentesque aliquet justo at sequi, atque quasi.",
+    },    
   ],
 };
 </script>

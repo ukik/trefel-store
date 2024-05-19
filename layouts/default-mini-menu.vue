@@ -5,17 +5,6 @@ import type { EssentialLinkProps } from "@/components/EssentialLink.vue";
 
 import { useRoute } from "vue-router";
 
-// import { useAuthStore } from "~/stores/AuthStore"
-const store = useAuthStore()
-const { fetchLoginAuth, fetchInitAuth } = store; // have all reactive states here
-const { auth } = storeToRefs(store); // have all reactive states here
-
-await fetchInitAuth()
-// await fetchLoginAuth() // DIRECTLY
-
-
-
-
 const route = useRoute();
 // const page = ref<any>({})
 
@@ -71,8 +60,7 @@ watch(
   }
 );
 
-onMounted(async () => {
-  console.log('layout/default.vue onMounted', auth)
+onMounted(() => {
   if ($q.screen.width > 1024) {
     leftDrawerMini.value = true; // aslinya true
     leftDrawerOpen.value = true;
@@ -81,7 +69,53 @@ onMounted(async () => {
     leftDrawerOpen.value = false;
   }
   leftDrawerVisible.value = true
+
 });
+
+const essentialLinks: EssentialLinkProps[] = [
+  {
+    title: "Docs",
+    caption: "quasar.dev",
+    icon: "school",
+    link: "https://quasar.dev",
+  },
+  {
+    title: "Github",
+    caption: "github.com/quasarframework",
+    icon: "code",
+    link: "https://github.com/quasarframework",
+  },
+  {
+    title: "Discord Chat Channel",
+    caption: "chat.quasar.dev",
+    icon: "chat",
+    link: "https://chat.quasar.dev",
+  },
+  {
+    title: "Forum",
+    caption: "forum.quasar.dev",
+    icon: "record_voice_over",
+    link: "https://forum.quasar.dev",
+  },
+  {
+    title: "Twitter",
+    caption: "@quasarframework",
+    icon: "rss_feed",
+    link: "https://twitter.quasar.dev",
+  },
+  {
+    title: "Facebook",
+    caption: "@QuasarFramework",
+    icon: "public",
+    link: "https://facebook.quasar.dev",
+  },
+  {
+    title: "Quasar Awesome",
+    caption: "Community Quasar projects",
+    icon: "favorite",
+    link: "https://awesome.quasar.dev",
+  },
+];
 
 const leftDrawerOpen = ref(false);
 const leftDrawerMini = ref(true);
@@ -89,8 +123,6 @@ const leftDrawerMini = ref(true);
 const rightDrawerOpen = ref(false);
 
 function toggleLeftDrawer() {
-  leftDrawerOpen.value = !leftDrawerOpen.value;
-  return
   if ($q.screen.width > 1024) {
     leftDrawerMini.value = !leftDrawerMini.value;
     // leftDrawerOpen.value = !leftDrawerOpen.value;
@@ -103,7 +135,7 @@ function toggleLeftDrawer() {
 const scroll_triggered = ref("bg-top");
 function scrollHandler(info) {
   // console.log("scrollHandler", info?.position);
-  scroll_triggered.value = info.position >= 30 ? "bg-down" : "bg-top";
+  scroll_triggered.value = info.position >= 60 ? "bg-down" : "bg-top";
 }
 
 // const layoutKey = ref(Math.random());
@@ -120,7 +152,6 @@ function onMouseLeave() {
     leftDrawerMini.value = true;
   }   
 }
-
 
 </script>
 
@@ -177,11 +208,13 @@ function onMouseLeave() {
 
     <q-drawer
     :width="280"
+      :mini-to-overlay="$q.screen.width > 1024"
       v-show="leftDrawerVisible"
       @mouseover="onMouseOver"
       @mouseleave="onMouseLeave"
+      :mini="leftDrawerMini"
       v-model="leftDrawerOpen"
-      behavior="mobile"
+      :behavior="behavior"
       :show-if-above="false"
       side="left"
       bordered
@@ -271,8 +304,7 @@ function onMouseLeave() {
             />
           </q-toolbar>
         </q-card-section>
-        <!-- {{ store.auth }} // {{ store.getAuth }} -->
-        <!-- {{ store.getAuth }} -->
+
         <slot />
 
         <LayoutFooter></LayoutFooter>

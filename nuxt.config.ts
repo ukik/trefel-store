@@ -2,7 +2,8 @@
 export default defineNuxtConfig({
   typescript: {
     strict: false
-  },  
+  },
+
   // head: {
 
   //   // // load script in your static folder
@@ -41,50 +42,62 @@ export default defineNuxtConfig({
   //   //   { src: '/assets/js/custom.min.js', defer: true },
   //   // ]    
   // }, 
-  ssr: true, // Disable Server Side rendering
-  definePageMeta: {
-    keepalive: true,
-  },
-  head: {
-    title: "Nuxt 3 Gallery",
-    description: "Masonry Gallery implementation with Vue Composition API and Nuxt 3",
-    meta: [
-      {charset: "UTF-8"},
-      {name: 'viewport', content: 'width=device-width, initial-scale=1'},
-      {name: "theme-color", content: "#e2e2e2"},
-    ],
-    link: [
-      {rel: "icon", href: "/public/favicon.ico", sizes: "any"},
-      {rel: "icon", href: "/public/favicon.svg", type: "image/x-icon"},
-      {rel: "mask-icon", href: "/public/favicon.svg", type: "image/x-icon"},
-      {rel: "apple-touch-icon", href: "safari-pinned-tab.svg", color: "#24a1bc"},
-      {rel: "manifest", href: "/public/site.webmanifest"},
-      // {
-      //   rel: "stylesheet",
-      //   href:
-      //     "https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap",
-      // },
-    ],
-  },
+  // Disable Server Side rendering
+  ssr: true,
+
+  // definePageMeta: {
+  //   keepalive: true,
+  // },
+
+  // head: {
+  //   title: "Nuxt 3 Gallery",
+  //   description: "Masonry Gallery implementation with Vue Composition API and Nuxt 3",
+  //   meta: [
+  //     {charset: "UTF-8"},
+  //     {name: 'viewport', content: 'width=device-width, initial-scale=1'},
+  //     {name: "theme-color", content: "#e2e2e2"},
+  //   ],
+  //   link: [
+  //     {rel: "icon", href: "/public/favicon.ico", sizes: "any"},
+  //     {rel: "icon", href: "/public/favicon.svg", type: "image/x-icon"},
+  //     {rel: "mask-icon", href: "/public/favicon.svg", type: "image/x-icon"},
+  //     {rel: "apple-touch-icon", href: "safari-pinned-tab.svg", color: "#24a1bc"},
+  //     {rel: "manifest", href: "/public/site.webmanifest"},
+  //     // {
+  //     //   rel: "stylesheet",
+  //     //   href:
+  //     //     "https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap",
+  //     // },
+  //   ],
+  // },
 
   site: {
     url: 'https://example.com',
     name: 'Awesome Site',
     description: 'Welcome to my awesome site!',
     defaultLocale: 'en', // not needed if you have @nuxtjs/i18n installed
-  },      
+  },
+
   css: [
     '@/assets/custom.scss',
   ],
+
   modules: [
     'nuxt-quasar-ui',
     '@nuxtjs/seo',
     '@vesp/nuxt-fontawesome',
-    "vue3-carousel-nuxt"
+    "vue3-carousel-nuxt",
+    "@pinia/nuxt",
+    '@/modules/blog/modules',
   ],
+  pinia: {
+    autoImports: ["defineStore", "acceptHMRUpdate"],
+  },
+  imports: { dirs: ["stores"] },
   plugins: [
     // '~/plugins/hello', // Susah
   ],
+
   // build: [
   //   '@fortawesome/free-brands-svg-icons'
   // ],
@@ -94,41 +107,8 @@ export default defineNuxtConfig({
       // regular: ['user'],
       brands: ['twitter','instagram','tiktok','whatsapp','x-twitter','facebook-f'],
     }
-  },  
-  quasar: {
-    plugins: [
-      'BottomSheet',
-      'Dialog',
-      'Loading',
-      'LoadingBar',
-      'Notify',
-      'Dark',
-    ],
-    directives: [
-      'Intersection',
-    ],
-    // extras: {
-    //   font: 'roboto-font',
-    // },
-    extras: [
-      'roboto-font',
-      'material-icons',
-      // 'mdi-v7',
-      // 'ionicons-v4', // last webfont was available in v4.6.3
-      // 'eva-icons',
-      // 'fontawesome-v6',
-      // 'themify',
-      // 'line-awesome',
-      // 'bootstrap-icons'
-    ],    
-    components: {
-      defaults: {
-        QBtn: {
-          unelevated: true,
-        },
-      },
-    },
   },
+
   // SEO Config
   // ogImage: {
   //   enabled: false
@@ -148,4 +128,81 @@ export default defineNuxtConfig({
   // linkChecker: {
   //   enabled: false
   // }  
+  quasar: {
+    preFetch: true,
+    plugins: [
+      'BottomSheet',
+      'Dialog',
+      'Loading',
+      'LoadingBar',
+      'Notify',
+      'Dark',
+    ],
+    // directives: [
+    //   'Intersection',
+    // ],
+    // extras: {
+    //   font: 'roboto-font',
+    // },
+    extras: {      
+      font:'roboto-font',
+      fontIcons:['material-icons'],
+      // 'mdi-v7',
+      // 'ionicons-v4', // last webfont was available in v4.6.3
+      // 'eva-icons',
+      // 'fontawesome-v6',
+      // 'themify',
+      // 'line-awesome',
+      // 'bootstrap-icons'
+    },    
+    components: {
+      defaults: {
+        QBtn: {
+          unelevated: true,
+        },
+      },
+    },
+  },
+
+  devtools: {
+    enabled: true
+  },
+
+  buildModules: ["@nuxtjs/pwa"],
+  pwa: {
+    meta: {
+      name: "abc",
+      author: "abc Inc",
+      description: "abc desc",
+    },
+    manifest: {
+      name: "My Awesome App",
+      lang: "en",
+      useWebmanifestExtension: false,
+      start_url: "abc.com",
+      display: "standalone",
+      background_color: "#fff3e0",
+      theme_color: "#fff3e0",
+    },
+    workbox: {
+      runtimeCaching: [
+        {
+          urlPattern: "https://assets.abc.com/.*",
+          strategyOptions: {
+            cacheName: "pwa-image-cache",
+          },
+          strategyPlugins: [
+            {
+              use: "Expiration",
+              config: {
+                maxEntries: 100,
+                maxAgeSeconds: 60 * 60 * 24 * 30,
+              },
+            },
+          ],
+        },
+      ],
+    },
+  },
+
 });
