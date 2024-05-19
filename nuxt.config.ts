@@ -95,6 +95,7 @@ export default defineNuxtConfig({
   },
   imports: { dirs: ["stores"] },
   plugins: [
+    { src: '@/plugins/authPiniaGuard', mode: 'all' }
     // '~/plugins/hello', // Susah
   ],
 
@@ -137,6 +138,7 @@ export default defineNuxtConfig({
       'LoadingBar',
       'Notify',
       'Dark',
+      'Cookies'
     ],
     // directives: [
     //   'Intersection',

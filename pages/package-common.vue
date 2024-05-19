@@ -112,6 +112,16 @@
 </template>
 
 <script setup>
+definePageMeta({
+  middleware: [
+    function (to, from) {
+      // Custom inline middleware
+    },
+    // 'adminGuard', // ambil dari @/plugins/authPiniaGuard
+  ],
+});
+
+
 const content = {
   title: "TOUR PACKAGES",
   cards: [

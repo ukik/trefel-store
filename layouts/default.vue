@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { useQuasar } from "quasar";
+import { useQuasar, Cookies } from "quasar";
 import { ref, nextTick, watch } from "vue";
 import type { EssentialLinkProps } from "@/components/EssentialLink.vue";
 
@@ -9,12 +9,8 @@ import { useRoute } from "vue-router";
 const store = useAuthStore()
 const { fetchLoginAuth, fetchInitAuth } = store; // have all reactive states here
 const { auth } = storeToRefs(store); // have all reactive states here
-
-await fetchInitAuth()
+// await fetchInitAuth() // pindah ke plugins
 // await fetchLoginAuth() // DIRECTLY
-
-
-
 
 const route = useRoute();
 // const page = ref<any>({})
@@ -72,7 +68,11 @@ watch(
 );
 
 onMounted(async () => {
-  console.log('layout/default.vue onMounted', auth)
+  // await fetchInitAuth()
+  // const token = useCookie("XSRF-TOKEN");
+  await fetchLoginAuth()
+  console.log('layout/default.vue onMounted', auth, Cookies.getAll())
+
   if ($q.screen.width > 1024) {
     leftDrawerMini.value = true; // aslinya true
     leftDrawerOpen.value = true;
